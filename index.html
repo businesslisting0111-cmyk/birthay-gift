@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Sweta 💖</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Segoe UI,sans-serif;
+background:linear-gradient(135deg,#ff5fa2,#ffc6e3,#fff0f7);
+overflow-x:hidden;color:#fff;
+}
+.hero{
+min-height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;padding:20px;text-align:center;
+}
+h1{
+font-size:3.2rem;
+animation:pulse 2s infinite;
+text-shadow:0 0 25px rgba(255,255,255,.8);
+}
+@keyframes pulse{
+50%{transform:scale(1.08)}
+}
+.tag{
+margin:10px 0 20px;
+font-size:1.2rem;
+animation:fade 3s infinite;
+}
+@keyframes fade{50%{opacity:.5}}
+
+<div class="gallery">
+
+    <div class="photo">
+        <img src="h(2).png" alt="Sweta Photo 1">
+    </div>
+
+    <div class="photo">
+        <img src="s(3).png" alt="Sweta Photo 2">
+    </div>
+
+</div>.glass{
+max-width:850px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+padding:25px;border-radius:30px;
+margin:20px;
+}
+
+.btn{
+padding:16px 35px;border:none;border-radius:50px;
+background:#ff2d7a;color:white;font-size:18px;
+cursor:pointer;box-shadow:0 0 25px #ff2d7a;
+animation:pulse 2s infinite;
+}
+
+#letter{display:none}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:25px;
+animation:rise linear forwards;
+pointer-events:none;
+}
+@keyframes rise{
+to{transform:translateY(-120vh) rotate(360deg);opacity:0}
+}
+
+.typewriter{
+overflow:hidden;
+border-right:3px solid white;
+white-space:normal;
+animation:typing 5s steps(80,end);
+}
+@keyframes typing{from{max-width:0}to{max-width:100%}}
+
+.quote{
+font-size:1.1rem;
+margin:10px 0;
+font-style:italic;
+}
+
+@media(max-width:768px){
+h1{font-size:2.2rem}
+.photo{width:90%;height:420px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<h1>🎂 Happy Birthday Sweta 💖</h1>
+
+<div class="tag">✨ "Some people make the world brighter just by being in it." ✨</div>
+
+<div class="gallery">
+<div class="photo"><img src="h(1).png"></div>
+<div class="photo"><img src="s(1).png"></div>
+</div>
+
+<div class="glass">
+<p class="quote">🌸 Your smile is beautiful, your heart is kind, and today is all about celebrating you.</p>
+<p class="quote">💫 May your day be filled with laughter, happiness, and unforgettable memories.</p>
+</div>
+
+<button class="btn" onclick="openLetter()">🎁 Open Birthday Surprise</button>
+
+<div id="letter" class="glass">
+<h2>💌 A Special Message From Shivam</h2>
+<br>
+<p class="typewriter">
+Dear Sweta,<br><br>
+
+Happy Birthday! 🎂✨<br><br>
+
+Today is your special day, and I just wanted to tell you how amazing you are.
+Your smile has a way of making everything feel brighter, and your presence makes ordinary moments feel special.
+
+I truly admire your kindness, your personality, and the positive energy you bring wherever you go.
+
+I don't expect anything in return—I simply wanted you to know that you are appreciated, respected, and very special.
+
+May all your dreams come true, may your happiness never fade, and may your life be filled with endless success and beautiful memories.
+
+Keep shining, keep smiling, and keep being the wonderful person you are. 🌸💖
+
+Happy Birthday, Sweta! 🎉
+
+<br><br>
+❤️ Best Wishes,<br>
+Shivam
+</p>
+</div>
+
+</section>
+
+<script>
+function hearts(count){
+for(let i=0;i<count;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML=['❤️','💖','✨','🌸','🎈'][Math.floor(Math.random()*5)];
+h.style.left=Math.random()*100+'vw';
+h.style.animationDuration=(3+Math.random()*4)+'s';
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+}
+}
+
+setInterval(()=>hearts(1),300);
+
+function openLetter(){
+document.getElementById('letter').style.display='block';
+hearts(120);
+window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
